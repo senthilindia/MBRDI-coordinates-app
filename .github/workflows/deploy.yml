@@ -3,13 +3,21 @@ jobs:
   test-and-build:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v3
+      # Check if Docker is installed and working
+      - name: Check Docker Version
+        run: |
+          docker --version
+          docker info
+
+      # Frontend Install & Build
       - name: Frontend Install & Build
         run: |
           npm install
           npm run build
-
         working-directory: ./frontend
+      # Backend Install
       - name: Backend Install
         run: |
           npm install
@@ -17,4 +25,5 @@ jobs:
 name: CI Build
 'on':
   push:
-    branches: [main]
+    branches:
+      - main
