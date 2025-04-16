@@ -1,0 +1,16 @@
+//front end
+react app 
+  -> one image need to load enable click x,y condinates need to capture and send into 
+   > material ui for better approach
+
+// backend
+consume image x,y cordniation
+nodejs,
+expresss
+
+//CICD github action 
+
+// dcoker file make dockerize file
+
+
+finally deploy this in any free platform
